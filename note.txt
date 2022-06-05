@@ -1,0 +1,18 @@
+- Link học: https://www.youtube.com/watch?v=08lWi4T2Bfg&list=PL_-VfJajZj0UXjlKfBwFX73usByw3Ph9Q&index=4
+- JS:
+arrow function
+const a = (log) => {
+	return log
+}
+const a = (log) => ({log})
+ở function 2 thì bỏ trong ({}) thì JS sẽ hiểu tự return
+- Trong file html, script js thêm type="module" để import được các module khác vào
+- Mỗi module chỉ export default 1
+- Nếu 1 module có export không phải export default thì bên file gọi module phải dùng destructuring
+- Có thể dùng alias trong import
+VD: import module có export default: import <name> from "<module>"
+import module không có export default :import {<name>} from "<module>"
+import dùng alias: import * as <alias> from "<module>"
+lúc này alias sẽ là object, truy cập vào các biến export của nó dùng alias.<name>
+Export mặc định: export default <name>
+Export vắn tắt: export {default} from "<module>", phải bỏ trong dấu {}
