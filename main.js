@@ -26,3 +26,23 @@ console.log(obj.getObjectName())
 logger2("Message !!!", TYPE_WARN)
 console.log(constants)
 logger2("Mesage 2 !!!", constants.TYPE_LOG)
+
+let str_name = "Javascript"
+let str_price = 100
+const course = {
+    str_name,
+    str_price,
+    getName() {
+        return `${str_name}: ${str_price}`
+    }
+}
+console.log(course.getName())
+
+// Dinh nghia key cho object duoi dang bien
+let fieldName = "str_name"
+let fieldPrice = "str_price"
+const fieldCourse = {
+    [fieldName]: "ReactJS",
+    [fieldPrice]: 200
+}
+console.log(fieldCourse)

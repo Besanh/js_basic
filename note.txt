@@ -16,3 +16,4 @@ import dùng alias: import * as <alias> from "<module>"
 lúc này alias sẽ là object, truy cập vào các biến export của nó dùng alias.<name>
 Export mặc định: export default <name>
 Export vắn tắt: export {default} from "<module>", phải bỏ trong dấu {}
+- Định nghĩa key cho object dưới dạng biến
