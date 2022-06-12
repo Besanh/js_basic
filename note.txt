@@ -11,9 +11,29 @@ const a = (log) => ({log})
 - Nếu 1 module có export không phải export default thì bên file gọi module phải dùng destructuring
 - Có thể dùng alias trong import
 VD: import module có export default: import <name> from "<module>"
-import module không có export default :import {<name>} from "<module>"
+import module không có export default: import {<name>} from "<module>"
 import dùng alias: import * as <alias> from "<module>"
 lúc này alias sẽ là object, truy cập vào các biến export của nó dùng alias.<name>
 Export mặc định: export default <name>
 Export vắn tắt: export {default} from "<module>", phải bỏ trong dấu {}
 - Định nghĩa key cho object dưới dạng biến
+- Destructuring cho array: [<name>, <name>] = [<array>]
+[<name>, ...<rest>] = [<array>]
+- Destructuring cho object: {<name>,<name>} = {<object>}
+{<name>, ...<rest>} = {<object>}
+Khi có object con trùng key với object cha, thì ta có thể đổi tên key:
+{<name>:<new_name>,...<rest>} = {<object>}
+VD: var object = {
+	name: "JS",
+	price: 1,
+	child: {
+		name: "React"
+	}
+}
+{name: parent_name, ...rest} = object
+Default value: {<name> = "<value>"} = object
+- Spread: sẽ bỏ cặp dấu [] hoặc {} ra khỏi phần tử
+VD: var a = [1,2]
+var b = [3,4]
+var c = [...a, ...b]
+Object tương tự

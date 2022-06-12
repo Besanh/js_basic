@@ -46,3 +46,69 @@ const fieldCourse = {
     [fieldPrice]: 200
 }
 console.log(fieldCourse)
+
+// Destructuring"
+var array_course = ["Javascript", "PHP", "Golang"];
+// var [c_js, d_php, e_go ] = array_course;
+var [c_js, ...rest] = array_course;
+console.log(c_js)
+console.log(rest)
+
+// Spread
+var course2 = {
+    name: "Javascript",
+    price: 100,
+    image: "no-image",
+    child: {
+        name: "ReactJS"
+    },
+    // description: "description value"
+}
+// var {name, price} = course2
+var {name: parent_name, child:{name}, description = "default description"} = course2
+console.log(parent_name)
+console.log(name)
+console.log(rest)
+console.log(description)
+
+// rest
+let log_test = (...params) => {
+    return params
+}
+console.log(log_test(1,2,3,4,5,6,7,8))
+
+// destructuring
+let log_test2 = ({name, ...rest}) => {
+    return name
+}
+console.log(log_test2({
+    name: "React Native",
+    price: 1000,
+    description: "default"
+}))
+
+// Spread
+var array_1 = ["JS", "PHP", "Golang"];
+var array_2 = ["React", "Ruby"];
+var array_3 = [...array_2, ...array_1];
+console.log(array_3);
+
+var obj1 = {
+    name: "js"
+}
+var obj2 = {
+    name: "php",
+    price: 5000
+}
+var obj3 = {
+    ...obj1,
+    ...obj2
+}
+console.log(obj3)
+
+let log_spread = (...rest) => {
+    for(var i = 0; i < rest.length; i++) {
+        console.log(rest[i])
+    }
+}
+log_spread(...array_1)
